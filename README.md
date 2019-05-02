@@ -3,48 +3,34 @@
 ![Build Status](https://travis-ci.com/jm-shi/MERN-Social-Network.svg?branch=master)
 
 
-A MERN stack social network application with MVP features implemented: user authentication, profile viewing, posting, commenting, and following/unfollowing.
+Fonctionnalités : authentication utilisateur, paramètre du profil, timeline, commentaires, liste d'amis (abonnement/désabonnement).
 
 
 ## User Stories
 
-- [x] As a user, I want to be able to create an account so that I can log in.
-- [x] As a user, I want to be able to log in so that I can view my home feed.
-- [x] As a user, I want to be able to view posts so that I know what people I’m following are up to.
-- [x] As a user, I want to be able to create a post so that I can share my current status.
-- [x] As a user, I want to be able to delete my posts so that people can no longer see them.
-- [x] As a user, I want to be able to edit my posts so that I can correct or clarify my thoughts.
-- [x] As a user, I want to be able to like/unlike a post so that I can approve posts I am fond of.
-- [x] As a user, I want to be able to comment on a post so that I can share additional thoughts.
-- [x] As a user, I want to be able to view other users' profiles so that I can learn more about them.
-- [x] As a user, I want to be able to edit my own profile (i.e. change name, avatar color, or bio) so that I can add more style to my page.
+- As a user, I want to be able to create an account so that I can log in.
+- As a user, I want to be able to log in so that I can view my home feed.
+- As a user, I want to be able to view posts so that I know what people I’m following are up to.
+- As a user, I want to be able to create a post so that I can share my current status.
+- As a user, I want to be able to delete my posts so that people can no longer see them.
+- As a user, I want to be able to edit my posts so that I can correct or clarify my thoughts.
+- As a user, I want to be able to like/unlike a post so that I can approve posts I am fond of.
+- As a user, I want to be able to comment on a post so that I can share additional thoughts.
+- As a user, I want to be able to view other users' profiles so that I can learn more about them.
+- As a user, I want to be able to edit my own profile (i.e. change name, avatar color, or bio) so that I can add more style to my page.
 
 
-## Setup instructions (tested on macOS 10.14 Mojave)
-To run server:
-1. Clone the repository.
-2. `cd` into the directory and run `npm install`.
-3. Run `cd client && npm install`.
-4. Back in the main directory, run `npm start`.
+## instructions de mise en route (testé sous macOS 10.14.4 Mojave)
+Serveur :
+1. Cloner le repository.
+2. Faire `cd` dans le dossier principal et lancer `npm install`.
+3. Lancer `cd client && npm install`.
+4. Retourner au dossier principal et lancer `npm start`.
 
-To set up your own database:
-1. Log into or create an [mLab](https://mlab.com/) account.
-	1. Create a new MongoDB deployment.
-  ![Deployment](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/deployment.png) 
-	![Select Provider](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/provider.png) 
-	2. Enter the database and create a new user.
-  ![Add User](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/addUser.png)
-	3. Replace the dbURI in "secrets.js" (located in backend folder) with your MongoDB URI. Replace `<dbuser>` and `<dbpassword>` with the user and password you just created respectively.
-  ![URI](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/uri.png) 
-	![Sample](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/sample.png) 
-2. Log into or create a [Heroku](https://heroku.com/) account. 
-	1. Create a new app in Heroku.
-	![Heroku](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/heroku.png)
-	2. In settings, add config vars for REACT_APP_DB_URI and REACT_APP_JWT_KEY.
-![Heroku Config](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/herokuConfig.png)
-3. Back in the main directory, run `npm start`.
+Pour modifier l'URL de base de donnée : secrets.js
 
-## Built With
+
+## Utilisations
 
 - [Express.js](https://expressjs.com/) - Backend web framework
 - [Heroku](http://heroku.com/) - Platform to deploy web applications
