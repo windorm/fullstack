@@ -12,19 +12,19 @@ const validateLogin = (data) => {
   /* eslint-enable no-param-reassign */
 
   if (!validator.isEmail(data.email)) {
-    errors.email = 'Email is invalid';
+    errors.email = 'Adresse e-mail invalide.';
   }
 
   if (validator.isEmpty(data.email)) {
-    errors.email = 'Email is required';
+    errors.email = 'Adresse e-mail requis.';
   }
 
   if (!validator.isLength(data.password, { min: 6, max: 30 })) {
-    errors.password = 'Password must have 6 and 30 chars';
+    errors.password = 'Le mot de passe doit contenir entre 6 et 30 caractères.';
   }
 
   if (validator.isEmpty(data.password)) {
-    errors.password = 'Password is required';
+    errors.password = 'Mot de passe requis.';
   }
 
   return {

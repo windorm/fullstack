@@ -124,7 +124,7 @@ router.patch('/:id', (req, res) => {
         const theComment = comments.find(comment =>
           comment._id.equals(req.body.commentId));
 
-        if (!theComment) return res.status(404).send('Comment not found');
+        if (!theComment) return res.status(404).send('Commentaire introuvable');
         theComment.text = req.body.text;
 
         return post.save((error) => {

@@ -17,39 +17,39 @@ const validateSignup = (data) => {
   /* eslint-enable no-param-reassign */
 
   if (!validator.isLength(data.name, { min: 2, max: 30 })) {
-    errors.name = 'Name must be between 2 and 30 chars';
+    errors.name = 'Le pseudonyme doit cotenir entre 2 et 30 caractères.';
   }
 
   if (validator.isEmpty(data.name)) {
-    errors.name = 'Name field is required';
+    errors.name = 'Pseudonyme requis.';
   }
 
   if (!validator.isEmail(data.email)) {
-    errors.email = 'Email is invalid';
+    errors.email = 'Adresse e-mail invalide.';
   }
 
   if (validator.isEmpty(data.email)) {
-    errors.email = 'Email is required';
+    errors.email = 'Adresse e-mail requis.';
   }
 
   if (!validator.isLength(data.password, { min: 6, max: 30 })) {
-    errors.password = 'Password must have between 6 and 30 chars';
+    errors.password = 'Le mot de passe doit contenir entre 6 et 30 caractères.';
   }
 
   if (validator.isEmpty(data.password)) {
-    errors.password = 'Password is required';
+    errors.password = 'Mot de passe requis.';
   }
 
   if (!validator.isLength(data.passwordConfirm, { min: 6, max: 30 })) {
-    errors.passwordConfirm = 'Password must have between 6 and 30 chars';
+    errors.passwordConfirm = 'Le mot de passe doit contenir entre 6 et 30 caractères.';
   }
 
   if (!validator.equals(data.password, data.passwordConfirm)) {
-    errors.passwordConfirm = 'Password and Confirm Password must match';
+    errors.passwordConfirm = 'Le mot de passe et le mot de passe de confirmation doivent être similaires.';
   }
 
   if (validator.isEmpty(data.passwordConfirm)) {
-    errors.passwordConfirm = 'Password is required';
+    errors.passwordConfirm = 'Mot de passe requis.';
   }
 
   return {

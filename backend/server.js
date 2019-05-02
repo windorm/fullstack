@@ -29,8 +29,8 @@ mongoose
     dbURI,
     { useNewUrlParser: true }
   )
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.log('Failed to connect to MongoDB', err));
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(err => console.log('Connexion à MongoDB échouée.', err));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -48,5 +48,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.listen(port, () => {
-  console.log(`Started up at port ${port}`);
+  console.log(`Utilisation du port ${port}`);
 });
