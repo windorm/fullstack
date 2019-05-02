@@ -241,7 +241,7 @@ class ProfilePage extends Component {
               display: profileId === signedInUser.userId ? 'block' : 'none'
             }}
           >
-            Edit Profile
+            Modifier
           </Button>
           <Card>
             <CardContent
@@ -271,17 +271,17 @@ class ProfilePage extends Component {
             <Grid container justify="center">
               <Paper className={classes.paper}>
                 <Typography variant="display1">{following.length}</Typography>
-                <Typography variant="headline">Following</Typography>
+                <Typography variant="headline">Abonnements</Typography>
               </Paper>
               <Paper className={classes.paper}>
                 <Typography variant="display1">{followers.length}</Typography>
-                <Typography variant="headline">Followers</Typography>
+                <Typography variant="headline">Abonnées</Typography>
               </Paper>
               <Paper className={classes.paper}>
+              <Typography variant="headline">Inscription le</Typography>
                 <Typography variant="display1" className={classes.date}>
                   {moment(createdAt).format('l')}
                 </Typography>
-                <Typography variant="headline">Joined</Typography>
               </Paper>
             </Grid>
           </Grid>
@@ -304,7 +304,7 @@ class ProfilePage extends Component {
                 id="modal-title"
                 className={classes.spacing}
               >
-                Edit Profile
+                Modifier le profil
               </Typography>
               <TextField
                 required
@@ -312,11 +312,11 @@ class ProfilePage extends Component {
                 className={classes.textField}
                 defaultValue={signedInUser.name}
                 id="name"
-                label="Name"
+                label="Nom d'utilisateur"
                 margin="normal"
                 name="name"
                 onChange={this.handleChange}
-                placeholder="What is your name?"
+                placeholder="Quel est ton nom?"
               />
               <TextField
                 fullWidth
@@ -324,7 +324,7 @@ class ProfilePage extends Component {
                 className={classes.textField}
                 value={avatarColor}
                 id="avatarColor"
-                label="Avatar Color"
+                label="Couleur de l'avatar"
                 margin="normal"
                 name="avatarColor"
                 onChange={this.handleChange}
@@ -341,11 +341,11 @@ class ProfilePage extends Component {
                 className={classes.textField}
                 defaultValue={displayedBio}
                 id="bio"
-                label="Bio"
+                label="Biographie"
                 margin="normal"
                 name="bio"
                 onChange={this.handleChange}
-                placeholder="Describe yourself."
+                placeholder="Décrivez-vous"
               />
               <FormControlLabel
                 control={
@@ -356,7 +356,7 @@ class ProfilePage extends Component {
                     value="showEmail"
                   />
                 }
-                label="Show email"
+                label="Montrer mon adresse email"
               />
               <Button
                 fullWidth
@@ -365,7 +365,7 @@ class ProfilePage extends Component {
                 type="submit"
                 variant="contained"
               >
-                Save
+                Sauvegarder
               </Button>
             </form>
           </div>

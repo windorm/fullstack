@@ -13,7 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import EditModal from './EditModal';
 import UserAvatar from './UserAvatar';
 
-const options = ['Edit', 'Delete'];
+const options = ['Modifier', 'Supprimer'];
 const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
@@ -142,14 +142,14 @@ class CommentBody extends Component {
                           key={option}
                           onClick={() =>
                             this.handleClose() ||
-                            (option === 'Delete'
+                            (option === 'Supprimer'
                               ? deleteComment(
                                   'deleteComment',
                                   commentId,
                                   postId
                                 )
                               : null) ||
-                            (option === 'Edit' ? this.handleModalOpen() : null)
+                            (option === 'Modifier' ? this.handleModalOpen() : null)
                           }
                         >
                           {option}

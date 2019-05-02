@@ -74,7 +74,7 @@ class UserCard extends Component {
           <CardActions>
             <Link className={classes.link} to={`/profile/${listedUser._id}`}>
               <Button size="small" color="primary">
-                View
+                Voir
               </Button>
             </Link>
             <Button
@@ -86,7 +86,7 @@ class UserCard extends Component {
                   : this.followThisUser(signedInUser.userId, listedUser._id))
               }
             >
-              {isFollowing ? 'Unfollow' : 'Follow'}
+              {isFollowing ? 'Se désabonner' : 'Suivre'}
             </Button>
           </CardActions>
         </div>

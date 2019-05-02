@@ -68,7 +68,7 @@ export class EditPost extends Component {
       >
         <TextField
           id="textarea"
-          placeholder="What's on your mind?"
+          placeholder="Exprimez-vous"
           multiline
           className={classes.textField}
           margin="normal"
@@ -82,7 +82,7 @@ export class EditPost extends Component {
           className={classes.button}
           type="submit"
         >
-          Update
+          Modifier
         </Button>
       </form>
     );

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import { createPost } from '../actions/postsActions';
+import SendIcon from '@material-ui/icons/Send';
 
 const styles = theme => ({
   button: {
@@ -55,7 +56,7 @@ export class CreatePost extends Component {
       >
         <TextField
           id="textarea"
-          placeholder="What's on your mind?"
+          placeholder="Exprimez-vous "
           multiline
           className={classes.textField}
           margin="normal"
@@ -69,7 +70,7 @@ export class CreatePost extends Component {
           className={classes.button}
           type="submit"
         >
-          Post
+          <SendIcon />
         </Button>
       </form>
     );

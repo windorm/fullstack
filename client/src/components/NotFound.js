@@ -28,9 +28,9 @@ const NotFound = ({ classes }) => (
     <NavbarContainer />
     <Paper className={classes.container}>
       <Typography variant="display4">404</Typography>
-      <Typography variant="headline">Page Not Found</Typography>
+      <Typography variant="headline">Page introuvable.</Typography>
       <Typography variant="subheading">
-        Sorry, the page you are looking for seems to be missing.
+      Désolé, la page que vous recherchez n'existe pas.
       </Typography>
     </Paper>
   </div>

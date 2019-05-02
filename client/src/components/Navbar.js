@@ -48,7 +48,7 @@ class Navbar extends Component {
               color="inherit"
             >
               <Link className={classes.logo} to="/">
-                MERN Social
+                FullStack Project
               </Link>
             </Typography>
             <div>

@@ -19,7 +19,7 @@ export const FolderListItems = ({ user }) => (
         <ListItemIcon>
           <HomeIcon />
         </ListItemIcon>
-        <ListItemText primary="Home" />
+        <ListItemText primary="Accueil" />
       </ListItem>
     </Link>
     <Link style={{ textDecoration: 'none' }} to={`/profile/${user.userId}`}>
@@ -27,7 +27,7 @@ export const FolderListItems = ({ user }) => (
         <ListItemIcon>
           <FaceIcon />
         </ListItemIcon>
-        <ListItemText primary="Profile" />
+        <ListItemText primary="Profil" />
       </ListItem>
     </Link>
     <Link style={{ textDecoration: 'none' }} to="/following">
@@ -35,7 +35,7 @@ export const FolderListItems = ({ user }) => (
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
-        <ListItemText primary="Following" />
+        <ListItemText primary="Abonnements" />
       </ListItem>
     </Link>
     <Link style={{ textDecoration: 'none' }} to="/discover">
@@ -43,7 +43,7 @@ export const FolderListItems = ({ user }) => (
         <ListItemIcon>
           <GroupIcon />
         </ListItemIcon>
-        <ListItemText primary="Discover" />
+        <ListItemText primary="Découvrir" />
       </ListItem>
     </Link>
   </div>
@@ -56,7 +56,7 @@ export const OtherFolderListItems = (
         <ListItemIcon>
           <SettingsIcon />
         </ListItemIcon>
-        <ListItemText primary="Settings" />
+        <ListItemText primary="Réglages" />
       </ListItem>
     </Link>
   </div>

@@ -1,19 +1,19 @@
 const colors = [
   {
     value: 0,
-    label: 'Red'
+    label: 'Rouge'
   },
   {
     value: 1,
-    label: 'Pink'
+    label: 'Rose'
   },
   {
     value: 2,
-    label: 'Purple'
+    label: 'Violet'
   },
   {
     value: 3,
-    label: 'Deep Purple'
+    label: 'Violet foncé'
   },
   {
     value: 4,
@@ -21,39 +21,39 @@ const colors = [
   },
   {
     value: 5,
-    label: 'Blue'
+    label: 'Bleu'
   },
   {
     value: 6,
-    label: 'Light Blue'
+    label: 'Bleu clair'
   },
   {
     value: 7,
-    label: 'Cyan'
+    label: 'Bleu cyan'
   },
   {
     value: 8,
-    label: 'Teal'
+    label: 'Bleu sarcelle'
   },
   {
     value: 9,
-    label: 'Green'
+    label: 'Vert'
   },
   {
     value: 10,
-    label: 'Light Green'
+    label: 'Vert clair'
   },
   {
     value: 11,
-    label: 'Lime'
+    label: 'Vert citron'
   },
   {
     value: 12,
-    label: 'Yellow'
+    label: 'Jaune'
   },
   {
     value: 13,
-    label: 'Amber'
+    label: 'Ambre'
   },
   {
     value: 14,
@@ -61,19 +61,19 @@ const colors = [
   },
   {
     value: 15,
-    label: 'Deep Orange'
+    label: 'Orange foncé'
   },
   {
     value: 16,
-    label: 'Brown'
+    label: 'Marron'
   },
   {
     value: 17,
-    label: 'Grey'
+    label: 'Gris'
   },
   {
     value: 18,
-    label: 'Blue Grey'
+    label: 'Bleu/Gris'
   }
 ];
 

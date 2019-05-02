@@ -55,7 +55,7 @@ class EditModal extends Component {
             id="modal-title"
             className={classes.spacing}
           >
-            {isEditingComment ? 'Edit this comment' : 'Edit this post'}
+            {isEditingComment ? 'Modifier ce commentaire' : 'Modifier ce statut'}
           </Typography>
           <Typography variant="subheading" id="modal-description">
             <EditPost

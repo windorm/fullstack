@@ -1,5 +1,5 @@
 module.exports = {
   dbURI:
-    'mongodb://username:password123@ds123675.mlab.com:23675/mern-social',
+    'mongodb+srv://arnaud:mdp@cluster0-gtz7j.mongodb.net/test?retryWrites=true',
   jwtKey: 'anVDd8sfj08apvn8f021fspaetrw6iekt'
 };

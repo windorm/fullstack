@@ -23,7 +23,7 @@ import Comments from './Comments';
 import EditModal from './EditModal';
 import UserAvatar from './UserAvatar';
 
-const options = ['Edit', 'Delete'];
+const options = ['Modifier', 'Supprimer'];
 const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
@@ -153,8 +153,8 @@ class Post extends Component {
                       key={option}
                       onClick={() =>
                         this.handleClose() ||
-                        (option === 'Delete' ? deletePost(_id) : null) ||
-                        (option === 'Edit' ? this.handleModalOpen() : null)
+                        (option === 'Supprimer' ? deletePost(_id) : null) ||
+                        (option === 'Modifier' ? this.handleModalOpen() : null)
                       }
                     >
                       {option}

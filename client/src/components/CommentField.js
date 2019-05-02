@@ -81,7 +81,7 @@ class CommentField extends Component {
             />
             <TextField
               multiline
-              placeholder="Write a comment"
+              placeholder="Ajouter un commentaire..."
               className={classes.commentField}
               onChange={this.handleChange}
               value={text}

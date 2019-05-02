@@ -27,7 +27,7 @@ router.post('/signup', async (req, res) => {
   try {
     const user = await User.find({ email: req.body.email }).exec();
     if (user.length > 0) {
-      return res.status(409).json({ error: 'Email already exists.' });
+      return res.status(409).json({ error: 'Cette adresse e-mail est déjà utilisée.' });
     }
     return bcrypt.hash(req.body.password, 10, (error, hash) => {
       if (error) {
@@ -68,14 +68,14 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email: req.body.email }).exec();
     if (!user) {
       return res.status(401).json({
-        email: 'Could not find email.'
+        email: 'Adresse e-mail inconnue.'
       });
     }
 
     return bcrypt.compare(req.body.password, user.password, (err, result) => {
       if (err) {
         return res.status(401).json({
-          message: 'Auth failed.'
+          message: 'Authentification échouée.'
         });
       }
       if (result) {
@@ -94,12 +94,12 @@ router.post('/login', async (req, res) => {
           }
         );
         return res.status(200).json({
-          message: 'Auth successful.',
+          message: 'Authentification réussie.',
           token
         });
       }
       return res.status(401).json({
-        password: 'Wrong password. Try again.'
+        password: 'Mot de passe incorrect.'
       });
     });
   } catch (err) {
@@ -116,7 +116,7 @@ router.get('/:id', async (req, res) => {
     if (user) {
       res.json({ user });
     } else {
-      res.status(404).json({ message: 'User not found' });
+      res.status(404).json({ message: 'Utilisateur introuvable.' });
     }
   } catch (err) {
     res.status(500).json({ err });
@@ -144,12 +144,12 @@ router.patch('/:id', async (req, res) => {
         if (err != null && err.name === 'MongoError' && err.code === 11000) {
           return res
             .status(500)
-            .send({ message: 'This email is already in use.' });
+            .send({ message: 'Cette adresse e-mail est déjà utilisée.' });
         }
       }
     );
     if (!user) {
-      return res.status(404).json({ message: 'User not found.' });
+      return res.status(404).json({ message: 'Utilisateur introuvable.' });
     }
 
     const token = jwt.sign(
@@ -179,7 +179,7 @@ router.patch('/following/:id', async (req, res) => {
   const { id } = req.params;
 
   if (!req.body.idToFollow) {
-    return res.status(404).json({ message: 'No ID found' });
+    return res.status(404).json({ message: 'Aucun résultat.' });
   }
 
   try {
@@ -204,7 +204,7 @@ router.patch('/unfollowing/:id', async (req, res) => {
   const { id } = req.params;
 
   if (!req.body.idToUnfollow) {
-    return res.status(404).json({ message: 'No ID found' });
+    return res.status(404).json({ message: 'Aucun résultat.' });
   }
 
   try {
@@ -229,7 +229,7 @@ router.patch('/followers/:id', async (req, res) => {
   const { id } = req.params;
 
   if (!req.body.followerId) {
-    return res.status(404).json({ message: 'No ID found' });
+    return res.status(404).json({ message: 'Aucun résultat.' });
   }
 
   try {
@@ -254,7 +254,7 @@ router.patch('/unfollowers/:id', async (req, res) => {
   const { id } = req.params;
 
   if (!req.body.unfollowerId) {
-    return res.status(404).json({ message: 'No ID found' });
+    return res.status(404).json({ message: 'Aucun résultat.' });
   }
 
   try {
@@ -278,7 +278,7 @@ router.patch('/unfollowers/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     await User.remove({ _id: req.params.id }).exec();
-    res.status(200).json({ message: 'Successfully deleted user.' });
+    res.status(200).json({ message: 'Utilisateur supprimé.' });
   } catch (err) {
     res.status(500).json({ message: err });
   }

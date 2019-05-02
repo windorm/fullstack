@@ -119,15 +119,15 @@ class SignupPage extends Component {
             <Avatar className={classes.avatar}>
               <LockIcon />
             </Avatar>
-            <Typography variant="headline">Sign Up</Typography>
+            <Typography variant="headline">S'inscrire</Typography>
             {successfulSignup && (
               <NavLink to="/login" className={classes.successText}>
-                Successfully signed up! Click here to log in.
+                Inscription réussie ! Cliquez ici pour vous connecter.
               </NavLink>
             )}
             <form onSubmit={this.handleSubmit} noValidate>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="name">Name</InputLabel>
+                <InputLabel htmlFor="name">Nom d'utilisateur</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   id="name"
@@ -139,7 +139,7 @@ class SignupPage extends Component {
                 <span className={classes.errorText}>{errors.name}</span>
               </FormControl>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="email">Email Address</InputLabel>
+                <InputLabel htmlFor="email">Adresse e-mail</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   id="email"
@@ -150,7 +150,7 @@ class SignupPage extends Component {
                 <span className={classes.errorText}>{errors.email}</span>
               </FormControl>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="password">Password</InputLabel>
+                <InputLabel htmlFor="password">Mot de passe</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   name="password"
@@ -162,7 +162,7 @@ class SignupPage extends Component {
                 <span className={classes.errorText}>{errors.password}</span>
               </FormControl>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="password">Confirm Password</InputLabel>
+                <InputLabel htmlFor="password">Confirmer le mot de passe</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   name="passwordConfirm"
@@ -182,13 +182,13 @@ class SignupPage extends Component {
                 color="primary"
                 className={classes.submit}
               >
-                Create Account
+                Créer mon compte
               </Button>
             </form>
             <Typography className={classes.footer} variant="body1">
-              {'Already have an account? '}
+              {'Vous avez déjà un compte ? '}
               <NavLink to="/login" className={classes.link}>
-                Log In
+                Connectez-vous
               </NavLink>
             </Typography>
           </Paper>

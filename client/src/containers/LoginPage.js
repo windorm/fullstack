@@ -115,10 +115,10 @@ class LoginPage extends Component {
             <Avatar className={classes.avatar}>
               <LockIcon />
             </Avatar>
-            <Typography variant="headline">Log In</Typography>
+            <Typography variant="headline">Se connecter</Typography>
             <form onSubmit={this.handleSubmit} noValidate>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="email">Email Address</InputLabel>
+                <InputLabel htmlFor="email">Adresse e-mail</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   id="email"
@@ -130,7 +130,7 @@ class LoginPage extends Component {
                 <span className={classes.errorText}>{errors.email}</span>
               </FormControl>
               <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="password">Password</InputLabel>
+                <InputLabel htmlFor="password">Mot de passe</InputLabel>
                 <Input
                   onChange={this.handleInputChange}
                   name="password"
@@ -140,6 +140,11 @@ class LoginPage extends Component {
                   error={!!errors.password}
                 />
                 <span className={classes.errorText}>{errors.password}</span>
+                <Typography >
+                <NavLink to="#" className={classes.link} >
+                Mot de passe oublié?
+                </NavLink>
+                </Typography>
               </FormControl>
 
               <Button
@@ -149,13 +154,13 @@ class LoginPage extends Component {
                 color="primary"
                 className={classes.submit}
               >
-                Log In
+                Connexion
               </Button>
             </form>
             <Typography className={classes.footer} variant="body1">
-              {"Don't have an account? "}
+              {"Vous n’avez pas de compte ? "}
               <NavLink to="/signup" className={classes.link}>
-                Sign Up
+              Inscrivez-vous
               </NavLink>
             </Typography>
           </Paper>
