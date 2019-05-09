@@ -9,6 +9,7 @@ import GroupIcon from '@material-ui/icons/GroupAdd';
 import HomeIcon from '@material-ui/icons/Home';
 import PeopleIcon from '@material-ui/icons/People';
 import SettingsIcon from '@material-ui/icons/Settings';
+import ForumIcon from '@material-ui/icons/Forum';
 
 import { Link } from 'react-router-dom';
 
@@ -22,14 +23,16 @@ export const FolderListItems = ({ user }) => (
         <ListItemText primary="Accueil" />
       </ListItem>
     </Link>
-    <Link style={{ textDecoration: 'none' }} to={`/profile/${user.userId}`}>
+
+    <Link style={{ textDecoration: 'none' }} to="/messages">
       <ListItem button>
         <ListItemIcon>
-          <FaceIcon />
+          <ForumIcon />
         </ListItemIcon>
-        <ListItemText primary="Profil" />
+        <ListItemText primary="Messages" />
       </ListItem>
     </Link>
+    
     <Link style={{ textDecoration: 'none' }} to="/following">
       <ListItem button>
         <ListItemIcon>
@@ -38,12 +41,22 @@ export const FolderListItems = ({ user }) => (
         <ListItemText primary="Abonnements" />
       </ListItem>
     </Link>
+
     <Link style={{ textDecoration: 'none' }} to="/discover">
       <ListItem button>
         <ListItemIcon>
           <GroupIcon />
         </ListItemIcon>
         <ListItemText primary="Découvrir" />
+      </ListItem>
+    </Link>
+
+    <Link style={{ textDecoration: 'none' }} to={`/profile/${user.userId}`}>
+      <ListItem button>
+        <ListItemIcon>
+          <FaceIcon />
+        </ListItemIcon>
+        <ListItemText primary="Profil" />
       </ListItem>
     </Link>
   </div>

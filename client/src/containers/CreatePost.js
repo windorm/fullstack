@@ -56,7 +56,8 @@ export class CreatePost extends Component {
       >
         <TextField
           id="textarea"
-          placeholder="Exprimez-vous "
+          placeholder="Exprimez-vous"
+          label="Créer une publication"
           multiline
           className={classes.textField}
           margin="normal"
