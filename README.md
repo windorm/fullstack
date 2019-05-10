@@ -1,6 +1,6 @@
 # FullStack Project
 
-Fonctionnalités : authentication utilisateur, paramètres du profil, timeline, commentaires, liste d'amis (abonnement/désabonnement).
+Fonctionnalités : authentication utilisateur, paramètres du profil, timeline, commentaires, liste d'amis (abonnement/désabonnement), messagerie.
 
 
 # User Stories
@@ -39,3 +39,27 @@ Fichier pour modifier l'URL de base de donnée : secrets.js
 - [React](https://reactjs.org/) - Bibliothèque JavaScript pour la construction d'interfaces utilisateur.
 - [Redux](https://redux.js.org/) - Bibliothèque JavaScript pour aider à mieux gérer l'état de l'application.
 - [Socket.io](https://socket.io/) - Bibliothèque JavaScript pour les applications Web en temps réel.
+
+
+Back :
+- odels: création des champs de saisis requis pour les posts, les commentaire et le sutilisateurs.
+- routes: création, modification et suppression des posts et des commentaires, mise à jour d'un utilisateur, suppression, suivi ou désabonnement.
+- validation: tests et messages d'erreur pour valider ou non une inscription, une connexion ou traiter un champs vide.
+- secret.js: URL base de donnée et JSON Web Token
+- server.js:
+
+
+Front :
+- public: icon de l'onglet, index.html et informations sur l'app (nom, couleurs utlisées, tailles)
+- src:
+    - actions: contient les actions pour les posts, les commentaites, les authentifications et les utilisateurs
+    - components: Routes entres les différentes pages, différents blocs utilisés pour pourvoir s'intégrer aux pages.
+    - containers: Pages de l'application.
+    - images: image utilisée pour illustrer le fond du profil d'un utilisateur.
+    - misc: couleurs utilisées pour modifier l'avatar d'un utilisateur.
+    - reducers: mise à jour des états en temps réel (likes, abonnements)
+    - tests: tests les différentes fonctionnalités.
+    - validation: meme role que pour le back
+
+    
+
