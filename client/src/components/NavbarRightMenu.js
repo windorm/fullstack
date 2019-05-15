@@ -45,7 +45,7 @@ class NavbarRightMenu extends Component {
           className={classes.menuButton}
           onClick={this.handleClick}
         >
-          {user.name}
+          {user.name}  ⋮
         </Button>
         <Menu
           id="right-menu"
@@ -55,9 +55,6 @@ class NavbarRightMenu extends Component {
         >
           <Link className={classes.link} to={`/profile/${user.userId}`}>
             <MenuItem onClick={this.handleClose}>Profil</MenuItem>
-          </Link>
-          <Link className={classes.link} to="/discover">
-            <MenuItem onClick={this.handleClose}>Découvrir</MenuItem>
           </Link>
           <MenuItem onClick={logoutUser}>Déconnexion</MenuItem>
         </Menu>

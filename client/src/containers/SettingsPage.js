@@ -40,7 +40,7 @@ const SettingsPage = ({ classes, logout }) => (
         className={classes.button}
         onClick={logout}
       >
-        Déconnexion
+        Se déconnecter
       </Button>
     </Paper>
   </div>

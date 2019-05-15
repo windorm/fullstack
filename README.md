@@ -17,7 +17,7 @@ Fonctionnalités : authentication utilisateur, paramètres du profil, timeline, 
 - En tant qu'utilisateur, je souhaite pouvoir modifier mon propre profil (c'est-à-dire changer le nom, la couleur de l'avatar ou la bio) afin de pouvoir ajouter davantage de style à ma page.
 
 
-# instructions de mise en route (testé sous macOS 10.14.4 Mojave)
+# instructions de mise en route (testé sous macOS 10.14.5 Mojave)
 Serveur :
 1. Cloner le repository.
 2. Faire `cd` dans le dossier principal et lancer `npm install`.
@@ -42,10 +42,16 @@ Fichier pour modifier l'URL de base de donnée : secrets.js
 
 
 Back :
-- odels: création des champs de saisis requis pour les posts, les commentaire et le sutilisateurs.
+- models: création des champs de saisis requis pour les posts, les commentaire et le sutilisateurs.
 - routes: création, modification et suppression des posts et des commentaires, mise à jour d'un utilisateur, suppression, suivi ou désabonnement.
 - validation: tests et messages d'erreur pour valider ou non une inscription, une connexion ou traiter un champs vide.
-- secret.js: URL base de donnée et JSON Web Token
+- secret.js: URL base de donnée et JSON Web Token (https://dashboard.heroku.com), créer une app et ajouter les variables de configuration si nouvelle base de donnée utulsée:
+1
+KEY : REACT_APP_DB_URI
+VALUE : mongodb://arnaud:mdp@cluster0-gtz7j.mongodb.net/test (URL de la nouvelle base)
+2
+KEY : REACT_APP_JWT_KEY
+VALUE : anVDd8sfj08apvn8f021fspaetrw6iekt (aucune modification à apporter)
 - server.js:
 
 

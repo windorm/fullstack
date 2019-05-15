@@ -8,7 +8,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import GroupIcon from '@material-ui/icons/GroupAdd';
 import HomeIcon from '@material-ui/icons/Home';
 import PeopleIcon from '@material-ui/icons/People';
-import SettingsIcon from '@material-ui/icons/Settings';
+import PoweroffIcon from '@material-ui/icons/PowerOff';
 import ForumIcon from '@material-ui/icons/Forum';
 
 import { Link } from 'react-router-dom';
@@ -67,9 +67,9 @@ export const OtherFolderListItems = (
     <Link style={{ textDecoration: 'none' }} to="/settings">
       <ListItem button>
         <ListItemIcon>
-          <SettingsIcon />
+          <PoweroffIcon />
         </ListItemIcon>
-        <ListItemText primary="Réglages" />
+        <ListItemText primary="Déconnexion" />
       </ListItem>
     </Link>
   </div>
