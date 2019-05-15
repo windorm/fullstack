@@ -1,5 +1,5 @@
 {
-  "name": "FullStack Project",
+  "name": "mern-social-network",
   "version": "1.0.0",
   "description": "Application de réseau social.",
   "main": "index.js",
@@ -17,14 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jm-shi/MERN-Social-Network.git"
+    "url": "git+https://github.com/windorm/fullstack.git"
   },
-  "author": "Jamie Shi",
+  "author": "windorm",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jm-shi/MERN-Social-Network/issues"
-  },
-  "homepage": "https://github.com/jm-shi/MERN-Social-Network#readme",
   "dependencies": {
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
